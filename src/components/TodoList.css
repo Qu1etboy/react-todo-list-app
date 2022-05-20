@@ -1,0 +1,58 @@
+.box {
+    width: 500px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: .5rem;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
+    animation: scale 0.2s;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 20px;
+}
+
+.box-done {
+    background-color: gray;
+    box-shadow: none;
+}
+
+.box-done p {
+    text-decoration: line-through;
+}
+
+.box-done .btn {
+    background-color: #C06C84;
+}
+
+.todo-detail {
+    display: flex;
+    align-items: center;
+}
+
+.todo-detail p {
+    padding-left: 5px;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.btn {
+    border: none;
+    border-radius: .25rem;
+    background-color: #F67280;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #C06C84;
+    color: white;
+}
