@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { Helmet } from "react-helmet";
 import FormComponent from './components/FormComponent';
 import TodoList from './components/TodoList';
 import './App.css';
+import Navbar from './components/Navbar';
+import { ThemeContext } from './Theme/Theme';
+import './Theme/Theme.css';
 
 function App() {
-  
+  const [theme, toggleTheme] = useContext(ThemeContext);
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
@@ -22,8 +26,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Todo List</h1>
+    <div className={`App ${theme}`}>
+      <Helmet>
+        <style>
+          {`body { background-color: ${theme === 'dark-theme' ? '#202020': '#EEEEEE'}; transition: 0.3s}`}
+        </style>
+      </Helmet>
+      <Navbar />
       <FormComponent handleInput={addTodo}/>
       <div className="container">
         { 
@@ -40,6 +49,7 @@ function App() {
           
         }
       </div>
+
     </div>
   );
 }

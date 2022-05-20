@@ -1,7 +1,9 @@
-// import { useState } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../Theme/Theme';
 import './TodoList.css';
 
 const TodoList = (props) => {
+    const [theme, toggleTheme] = useContext(ThemeContext);
     const {todo, handleRemove, handleToggle} = props;
     
     const removeTodo = () => {

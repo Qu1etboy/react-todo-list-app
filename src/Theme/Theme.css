@@ -1,0 +1,11 @@
+.dark-theme {
+    --primary-background-color: #202020;
+    --secondary-background-color: #282828;
+    --color: white;
+}
+
+.light-theme {
+    --primary-background-color: white;
+    --secondary-background-color: white;
+    --color: black;
+}
