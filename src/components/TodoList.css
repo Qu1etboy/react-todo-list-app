@@ -1,5 +1,5 @@
 .box {
-    width: 500px;
+    width: 100%;
     background-color: var(--secondary-background-color);
     color: var(--color);
     margin-top: 10px;
@@ -11,7 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px 0 20px;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 20px;
 }
 
 .box-done {
@@ -30,6 +31,7 @@
 .todo-detail {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .todo-detail p {

@@ -18,9 +18,16 @@
 .container {
   width: 500px;
   margin-top: 20px;
+  padding: 20px;
 }
 
 img {
   margin-top: 60px;
   max-width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 340px;
+  }
 }
